@@ -9,8 +9,8 @@ Modified @ Farzain - zFz
 require_once('./line_class.php');
 require_once('./unirest-php-master/src/Unirest.php');
 
-$channelAccessToken = 'YOUR-CHANNEL-ACCESS-TOKEN'; //sesuaikan 
-$channelSecret = 'YOUR-CHANNEL-SECRET-CODE';//sesuaikan
+$channelAccessToken = 'J6A2zs5tta+NL/+gwyGoYnNTX2XN0qXeU7AMDMcDvtyg8D5hT6KtiS7sPT++cI5/7YN1I3vWVLaaz2H3QK82/b+QJllx6sOKp5Nsj6IGz8XjfeZX9uSHDKUIdo90+U7QxrNMegBcrNth88NTdl21qQdB04t89/1O/w1cDnyilFU='; //sesuaikan 
+$channelSecret = 'a43e7333ad8bba1e05bbf01707a97d20';//sesuaikan
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 
@@ -68,8 +68,8 @@ function shalat($keyword) {
 # require_once('./src/function/hard.php');
 
 //show menu, saat join dan command /menu
-if ($type == 'join' || $command == '/menu') {
-    $text = "Assalamualaikum Kakak, aku adalah bot jadwal shalat, silahkan ketik\n\n/shalat <nama tempat>\n\nnanti aku bakalan kasih tahu jam berapa waktunya shalat ^_^";
+if ($type == 'join' || $command == '/uvss') {
+    $text = "Assalamualaikum Kakak, aku adalah Nengsih Rocker Lady nya UVSS, United Voice Star Solidarity... budayakan baca note dan kompak selalu jangan lupa shalat bagi yang muslim ya..";
     $balas = array(
         'replyToken' => $replyToken,
         'messages' => array(
@@ -97,19 +97,6 @@ if($message['type']=='text') {
         );
     }
 
-}else if($message['type']=='sticker')
-{	
-	$balas = array(
-							'replyToken' => $replyToken,														
-							'messages' => array(
-								array(
-										'type' => 'text',									
-										'text' => 'Makasih Kak Stikernya ^_^'										
-									
-									)
-							)
-						);
-						
 }
 if (isset($balas)) {
     $result = json_encode($balas);
